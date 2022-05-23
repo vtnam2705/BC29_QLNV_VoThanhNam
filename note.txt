@@ -1,0 +1,48 @@
+Mối quan hệ giữa các object:
+
+- Số giờ làm => xếp loại nhân viên
+
+- Tính tổng lương (Phương thức của object "People"): 
+    + Giám đốc: tổng lương = lương cơ bản * 3;
+    + Trưởng phòng: tổng lương = lương cơ bản * 2;
+    + Nhân viên: tổng lương = lương cơ bản;
+
+
+
+
+
+
+
+//------------------------------------------------------------
+Đối tượng "people"
+    Thuộc tính: 
+        + Tài khoản (taiKhoan)
+        + Họ và tên (hoTen)
+        + Email (email)
+        + Mật khẩu (matKhau)
+        + Năm sinh (namSinh)
+        + Lương cơ bản (luong)
+        + Chức vụ (chucVu)
+        + Giờ làm (gioLam)
+
+    Phương thức:
+
+        1. Tính tổng lương
+            var tongLuong = 0;
+            function tinhLuong(people.chucVu) {
+                if (people.chucVu === "Sếp")  {
+                    tongLuong =  people.luongCoBan * 3;   
+                } else if (people.chucVu === "Trưởng phòng") {
+                    tongLuong = people.luongCoBan * 2;
+                } else if (people.chucVu === "Nhân viên") {
+                    tongLuong = people.luongCoBan
+                }
+            }
+        
+        2. Xếp loại nhân viên
+
+            if (people.gioLam >= 192) {
+                return "Xuat sac";
+            } else if (people.gioLam >= 176) {
+                return "Nhan vien gioi";
+            } else if (people.gioLam )
