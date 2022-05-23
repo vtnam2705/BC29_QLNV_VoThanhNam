@@ -186,7 +186,7 @@ function suaNV(id) {
 
 // Cập nhật nhân viên
 getID("btnCapNhat").onclick = function () {
-    var nhanVien = LayThongTinNV(false);
+    var nhanVien = LayThongTinNV();
     // console.log(worker);
     dsnv.capNhat(nhanVien);
     taoBang(dsnv.arr);
