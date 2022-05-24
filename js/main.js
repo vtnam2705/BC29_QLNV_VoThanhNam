@@ -73,13 +73,15 @@ function LayThongTinNV(isAdd) {
 
 
     // Salary
-    isValid &= validation.kiemTraLuong(
-        _salary,
-        "tbLuongCB",
-        "(*) Mức lương trong khoảng từ 1.000.000 - 20.000.000",
-        1000000,
-        20000000
-    )
+    isValid &=
+        validation.kiemTraRong(_salary, "tbLuongCB", "(*) Vui lòng nhập lương") &&
+        validation.kiemTraLuong(
+            _salary,
+            "tbLuongCB",
+            "(*) Mức lương trong khoảng từ 1.000.000 - 20.000.000",
+            1000000,
+            20000000
+        )
 
 
     // Chức vụ
@@ -91,13 +93,15 @@ function LayThongTinNV(isAdd) {
 
 
     // Giờ làm 
-    isValid &= validation.kiemTraGioLam(
-        _thoiGian,
-        "tbGiolam",
-        "(*) Thời gian làm việc từ 80 - 200 giờ",
-        80,
-        200
-    )
+    isValid &=
+        validation.kiemTraRong(_thoiGian, "tbGiolam", "(*) Vui lòng nhập giờ làm") && 
+        validation.kiemTraGioLam(
+            _thoiGian,
+            "tbGiolam",
+            "(*) Thời gian làm việc từ 80 - 200 giờ",
+            80,
+            200
+        )
 
 
 
