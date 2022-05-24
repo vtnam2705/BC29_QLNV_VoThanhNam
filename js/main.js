@@ -183,12 +183,14 @@ function suaNV(id) {
 
     // Disabled button "Thêm người dùng"
     getID("tknv").disabled = true;
+
+    // Display block button "cập nhật"
+    getID("btnCapNhat").style.display = "block";
 }
 
 // Cập nhật nhân viên
 getID("btnCapNhat").onclick = function () {
     var nhanVien = LayThongTinNV(false);
-    // console.log(worker);
     dsnv.capNhat(nhanVien);
     taoBang(dsnv.arr);
     setLocalStorage();
@@ -214,6 +216,10 @@ getID("searchName").addEventListener("keyup", function () {
 })
 
 // Click button to display
+getID("btnThem").onclick = function () {
+    getID("btnCapNhat").style.display = "none";
+}
+
 getID("btnThemNV").onclick = function () {
     var nhanVien = LayThongTinNV(true);
     if (nhanVien) {
@@ -221,8 +227,6 @@ getID("btnThemNV").onclick = function () {
         taoBang(dsnv.arr);
         setLocalStorage();
     }
-    // if (_thoiGian) {
-    // }
 }
 
 
