@@ -68,8 +68,8 @@ function LayThongTinNV(isAdd) {
     // Password
     isValid &=
         validation.kiemTraRong(_password, "tbMatKhau", "(*) Vui lòng nhập mật khẩu") &&
-        validation.kiemTraDoDaiKiTu(_password, "tbMatKhau", 6, 10, "(*) Vui lòng nhập từ 6 - 10 ký tự")
-    // && validation.kiemTraMatKhau(_password, "tbMatKhau", "Mật khẩu chứa ít nhất 1 ký tự số, 1 ký tự in hoa, 1 ký tự đặc biệt")
+        validation.kiemTraDoDaiKiTu(_password, "tbMatKhau", 6, 10, "(*) Vui lòng nhập từ 6 - 10 ký tự") && 
+        validation.kiemTraMatKhau(_password, "tbMatKhau", "Mật khẩu chứa ít nhất 1 ký tự số, 1 ký tự in hoa, 1 ký tự đặc biệt")
 
 
     // Salary
@@ -94,7 +94,7 @@ function LayThongTinNV(isAdd) {
 
     // Giờ làm 
     isValid &=
-        validation.kiemTraRong(_thoiGian, "tbGiolam", "(*) Vui lòng nhập giờ làm") && 
+        validation.kiemTraRong(_thoiGian, "tbGiolam", "(*) Vui lòng nhập giờ làm") &&
         validation.kiemTraGioLam(
             _thoiGian,
             "tbGiolam",
