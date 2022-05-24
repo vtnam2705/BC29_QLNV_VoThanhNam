@@ -145,11 +145,11 @@ function taoBang(data) {
                 <td>${item.tongLuong}</td>
                 <td>${item.danhHieu}</td>
                 <td>
-                    <button type="button" class="btn btn-primary btn-update" data-toggle="modal" data-target="#myModal" onclick="suaNV('${item.name}')">
+                    <button type="button" class="btn btn-primary btn-update" data-toggle="modal" data-target="#myModal" onclick="suaNV('${item.account}')">
                         Sửa
                     </button>
 
-                    <button type="button" class="btn btn-danger btn-delete" onclick="deleteNV('${item.name}')">
+                    <button type="button" class="btn btn-danger btn-delete" onclick="deleteNV('${item.account}')">
                         Xóa
                     </button>
                 </td>
@@ -181,16 +181,13 @@ function suaNV(id) {
         getID("gioLam").value = nv.thoiGian;
     }
 
-    // Display block button "Cập nhật"
-    getID("btnCapNhat").style.display = "block";
-
     // Disabled button "Thêm người dùng"
-    // getID("btnThemNV").disabled = true;
+    getID("tknv").disabled = true;
 }
 
 // Cập nhật nhân viên
 getID("btnCapNhat").onclick = function () {
-    var nhanVien = LayThongTinNV();
+    var nhanVien = LayThongTinNV(false);
     // console.log(worker);
     dsnv.capNhat(nhanVien);
     taoBang(dsnv.arr);

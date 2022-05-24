@@ -3,10 +3,10 @@ function DanhSachNhanVien() {
     this.arr = [];
 
     // Find index
-    this.findIndex = function (name) {
+    this.findIndex = function (account) {
         var index = -1;
         this.arr.forEach(function(item, i) {
-            if (item.name == name) {
+            if (item.account == account) {
                 index = i;
             }
         });
@@ -22,8 +22,8 @@ function DanhSachNhanVien() {
     
 
     // Delete nhan vien
-    this.xoaNV = function (name) {
-        var index = this.findIndex(name);
+    this.xoaNV = function (account) {
+        var index = this.findIndex(account);
 
         if (index > -1) {
             this.arr.splice(index, 1);
@@ -31,8 +31,8 @@ function DanhSachNhanVien() {
     }; 
 
     // Sửa nhân viên
-    this.suaNV = function (name) {
-        var index = this.findIndex(name);
+    this.suaNV = function (account) {
+        var index = this.findIndex(account);
         if (index !== -1) {
             return this.arr[index];
         }
@@ -42,7 +42,7 @@ function DanhSachNhanVien() {
 
     // Cập nhật nhân viên
     this.capNhat = function (nv) {
-        var index = this.findIndex(nv.name);
+        var index = this.findIndex(nv.account);
         if (index !== -1) {
             this.arr[index] = nv; 
         }
@@ -66,5 +66,6 @@ function DanhSachNhanVien() {
 
         return (mangTimKiem);
     };
+    
 }
 
